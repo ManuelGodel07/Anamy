@@ -1,27 +1,30 @@
 import './App.css';
+import { HashRouter, Route, Routes, Navigate, Link } from 'react-router-dom';
+import HomeScreen from './screens/HomeScreen';
+import Create from './screens/Create';
+import Catering from './screens/Catering';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
+      <HashRouter>
+        <div>
+          <nav className='Menu-navigate'>
+            <Link to="/" style={{ marginRight: '10px' }}>Home</Link>
+            <Link to="/crea" style={{ marginRight: '10px' }}>Crear</Link>
+            <Link to="/catering" style={{ marginRight: '10px' }}>Catering</Link>
+          </nav>
+          <div>
+            <Routes>
+              <Route path='/' element={<HomeScreen />} />
+              <Route path='/Inicio' element={<HomeScreen />} />
+              <Route path='/Crea' element={<Create />} />
+              <Route path='/catering' element={<Catering />} />
+            </Routes>
+
+          </div>
+        </div>
+      </HashRouter>
     </div>
   );
 }

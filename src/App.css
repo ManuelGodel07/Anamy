@@ -29,3 +29,18 @@
 .small {
   font-size: 0.75rem;
 }
+.Menu-navigate{
+  height: 10vh;
+  background-color: #61dafb;
+}
+.Section-Cards{
+  background-color: antiquewhite;
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.My-Card{
+  width:30%;
+  background-color: azure;
+}

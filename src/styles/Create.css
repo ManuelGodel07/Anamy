@@ -1,0 +1,28 @@
+.Container{
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.My-Header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.Maker{
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+}
+.Details-Ingredients{
+    background-color: red;
+}
+.Preview{
+    width: 40vw;
+    background-color: purple;
+}
+.Maker{
+    width: 40vw;
+    background-color: peru;
+
+}
