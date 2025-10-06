@@ -18,11 +18,11 @@ function App() {
           </nav>
           <div>
             <Routes>
+              <Route path="*" element={<HomeScreen />} />
               <Route path="/" element={<HomeScreen />} />
               <Route path="/crea" element={<Create />} />
               <Route path="/catering" element={<Catering />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="*" element={<HomeScreen />} />
             </Routes>
           </div>
         </div>
