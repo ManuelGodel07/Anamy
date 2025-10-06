@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+    font-family: 'Playfair Display';
+
 }
 
 .App-logo {
@@ -7,19 +9,8 @@
   pointer-events: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .App-link {
-  color: #61dafb;
+  color: #71ebf0;
 }
 
 .heart {
@@ -30,11 +21,21 @@
   font-size: 0.75rem;
 }
 .Menu-navigate{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   height: 10vh;
-  background-color: #61dafb;
+  background-color: #C47C4A;
+
+}
+.Menu-navigate a {
+  color: #4b2e05;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 .Section-Cards{
-  background-color: antiquewhite;
   width: 90vw;
   display: flex;
   flex-direction: row;

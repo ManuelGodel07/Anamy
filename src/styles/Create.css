@@ -1,28 +1,149 @@
-.Container{
-    background-color: aquamarine;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+/* 🎨 Contenedor general */
+.Container {
+display: flex;
+justify-content: space-between;
+gap: 2rem;
+padding: 2rem;
+background-color: #f7f8fa;
+border-radius: 16px;
+box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+flex-wrap: wrap;
 }
-.My-Header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.Maker{
-    background-color: pink;
-    display: flex;
-    flex-direction: column;
-}
-.Details-Ingredients{
-    background-color: red;
-}
-.Preview{
-    width: 40vw;
-    background-color: purple;
-}
-.Maker{
-    width: 40vw;
-    background-color: peru;
 
+/* 🔹 Encabezado */
+.My-Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(90deg, #FAF8E6, #2A2A2A);
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.My-Header h2 {
+margin: 0;
+font-size: 1.6rem;
+font-weight: 600;
+}
+
+.My-Header button {
+background-color: #1e88e5;
+border: none;
+color: white;
+font-weight: 600;
+padding: 0.6rem 1.2rem;
+border-radius: 8px;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.My-Header button:hover {
+background-color: #1565c0;
+transform: scale(1.05);
+}
+
+/* 🧀 Panel izquierdo */
+.Maker {
+flex: 1;
+min-width: 320px;
+display: flex;
+flex-direction: column;
+gap: 1.5rem;
+}
+
+.Details-Board,
+.Details-Ingredients {
+background-color: #ffffff;
+border-radius: 12px;
+padding: 1.5rem;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.Details-Board h3,
+.Details-Ingredients h3 {
+margin-bottom: 1rem;
+color: #444;
+font-size: 1.2rem;
+border-bottom: 2px solid #e0e0e0;
+padding-bottom: 0.5rem;
+}
+
+/* 📝 Formularios */
+form {
+display: flex;
+flex-direction: column;
+gap: 1rem;
+}
+
+label {
+font-weight: 500;
+color: #555;
+}
+
+input, select {
+border: 1px solid #ccc;
+border-radius: 8px;
+padding: 0.7rem;
+font-size: 0.95rem;
+outline: none;
+transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus {
+border-color: #1e88e5;
+box-shadow: 0 0 5px rgba(30, 136, 229, 0.3);
+}
+
+/* 🍇 Panel derecho (vista previa) */
+.Preview {
+flex: 1;
+min-width: 320px;
+background-color: #ffffff;
+border-radius: 12px;
+padding: 1.5rem;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.Preview-Board h3 {
+font-size: 1.2rem;
+color: #444;
+margin-bottom: 1rem;
+border-bottom: 2px solid #e0e0e0;
+padding-bottom: 0.5rem;
+}
+
+.Preview-Board img {
+width: 100%;
+max-height: 300px;
+object-fit: cover;
+border-radius: 12px;
+box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 💡 Sugerencias */
+.Suggestions {
+margin-top: 1.5rem;
+min-height: 50px;
+color: #666;
+font-style: italic;
+}
+
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+.Container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.Maker,
+.Preview {
+    width: 100%;
+}
+
+.My-Header {
+    flex-direction: column;
+    gap: 1rem;
+}
 }

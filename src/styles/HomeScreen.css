@@ -1,0 +1,69 @@
+.Home-Section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Section-Cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 2rem;
+    justify-items: center;
+}
+
+.My-Card {
+    background: #fff;
+    border-radius: 10%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 15vw;
+    text-align: center;
+}
+
+.My-Card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.My-Card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.My-Card h2 {
+    font-size: 1.3rem;
+    color: #333;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.My-Card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0.3rem 1rem;
+    line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+    .Section-Cards {
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    .My-Card {
+        max-width: 90%;
+    }
+
+    .My-Card img {
+        height: 180px;
+    }
+
+    .My-Card h2 {
+        font-size: 1.1rem;
+    }
+
+    .My-Card p {
+        font-size: 0.9rem;
+    }
+}

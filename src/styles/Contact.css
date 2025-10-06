@@ -1,0 +1,66 @@
+.ContactForm {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #fff7f0;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  font-family: 'Playfair Display', serif;
+}
+
+.ContactForm h2 {
+  text-align: center;
+  color: #4b2e05;
+  margin-bottom: 0.5rem;
+}
+
+.ContactForm p {
+  text-align: center;
+  color: #6b4a2c;
+  margin-bottom: 2rem;
+}
+
+.ContactForm label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #4b2e05;
+}
+
+.ContactForm input,
+.ContactForm select,
+.ContactForm textarea {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  margin-bottom: 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.ContactForm input:focus,
+.ContactForm select:focus,
+.ContactForm textarea:focus {
+  border-color: #c59b6d;
+  box-shadow: 0 0 5px rgba(197, 155, 109, 0.5);
+}
+
+.ContactForm button {
+  width: 100%;
+  padding: 0.8rem;
+  background: #c59b6d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ContactForm button:hover {
+  background: #a0784c;
+  transform: translateY(-2px);
+}
