@@ -1,0 +1,106 @@
+h1 {
+    color: #C47C4A;
+    text-align: center;
+}
+
+.My-title p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: center;
+    margin: 1rem auto;
+    max-width: 800px;
+}
+
+.Section-Cards {
+    display: flex;
+    flex-direction: row;
+    height: 60vh;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.My-Card {
+  border-radius: 5%;
+  width: 40%;
+}
+
+.My-Card h2 {
+  color: #C47C4A;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.My-Card p {
+  font-size: 1rem;
+  margin: 1rem 1.5rem;
+  text-align: justify;
+  color: #3a2400;
+}
+
+.My-Card img {
+  width: 100%;
+  height: 40%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---------- Responsivo para pantallas medianas (tablets) ---------- */
+@media (max-width: 1024px) {
+  .My-Card {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    max-width: 90%;
+  }
+
+  .My-Card img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+
+    .My-Card {
+        width: 45%;
+        padding: 0;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .My-Card h2 {
+        font-size: 1.4rem;
+    }
+    .My-Card p {
+        font-size: 0.9rem;
+    }
+    .My-Card img {
+        height: 30%;
+    }
+}
+
+
+
+
+@media (max-width: 480px) {
+    .My-Card {
+        width: 90%;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .My-Card h2 {
+        font-size: 1.2rem;
+    }
+    .My-Card p {
+        font-size: 0.8rem;
+    }
+    .My-Card img {
+        height: 30%;
+    }
+}

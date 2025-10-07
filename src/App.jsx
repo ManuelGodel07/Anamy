@@ -11,18 +11,18 @@ function App() {
       <HashRouter>
         <div>
           <nav className='Menu-navigate'>
-            <Link to="/" style={{ marginRight: '10px' }}>Home</Link>
-            <Link to="/crea" style={{ marginRight: '10px' }}>Create</Link>
-            <Link to="/catering" style={{ marginRight: '10px' }}>Catering</Link>
-            <Link to="/contact" style={{ marginRight: '10px' }}>Contact Us</Link>
+            <Link to="/" className='My-card'>Home</Link>
+            <Link to="/crea" className='My-card'>Create</Link>
+            <Link to="/catering" className='My-card'>Catering</Link>
+            <Link to="/contact" className='My-card'>Contact Us</Link>
           </nav>
           <div>
             <Routes>
-              <Route path="*" element={<HomeScreen />} />
               <Route path="/" element={<HomeScreen />} />
               <Route path="/crea" element={<Create />} />
               <Route path="/catering" element={<Catering />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<HomeScreen />} />
             </Routes>
           </div>
         </div>

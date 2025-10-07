@@ -5,60 +5,17 @@ const Create = () => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
 
-  // Categorías con selección múltiple
   const categorias = {
-    Quesos: [
-      { id: "queso-brie", label: "Brie francés", icon: "🧀" },
-      { id: "jamon-serrano", label: "Camembert", icon: "🧈" },
-      { id: "aceitunas", label: "Manchego curado", icon: "🫒" },
-      { id: "gouda", label: "Gouda ahumado", icon: "🧀" },
-      { id: "roquefort", label: "Roquefort", icon: "🧀" },
-      { id: "parmigiano", label: "Parmigiano Reggiano", icon: "🧀" },
-      { id: "cabra", label: "Queso de cabra con miel", icon: "🐐" },
-    ],
-    Embutidos: [
-      { id: "serrano", label: "Jamón serrano ibérico", icon: "🥩" },
-      { id: "salami", label: "Salami italiano", icon: "🍖" },
-      { id: "prosciutto", label: "Prosciutto di Parma", icon: "🥓" },
-      { id: "lomo", label: "Lomo embuchado", icon: "🍗" },
-      { id: "capocollo", label: "Capocollo", icon: "🍖" },
-      { id: "chorizo", label: "Chorizo español", icon: "🌶️" },
-      { id: "mortadela", label: "Mortadela trufada", icon: "🥪" },
-    ],
-    Frutas: [
-      { id: "uvas", label: "Uvas verdes", icon: "🍇" },
-      { id: "fresas", label: "Fresas", icon: "🍓" },
-      { id: "frambuesas", label: "Frambuesas", icon: "🫐" },
-      { id: "higos", label: "Higos frescos", icon: "🍈" },
-      { id: "datiles", label: "Dátiles rellenos", icon: "🌰" },
-      { id: "naranjas", label: "Naranjas", icon: "🍊" },
-      { id: "arandanos", label: "Arándanos secos", icon: "🍒" },
-      { id: "almendras", label: "Almendras", icon: "🥜" },
-    ],
-    Bebidas: [
-      { id: "brindis", label: "Brindis Rosé", icon: "🥂" },
-      { id: "moet", label: "Moet & Chandon", icon: "🍾" },
-      { id: "chardonnay", label: "Chardonnay", icon: "🍷" },
-      { id: "malbec", label: "Malbec Nocturno", icon: "🍷" },
-      { id: "sangria", label: "Sangría Artesanal", icon: "🍹" },
-      { id: "gin", label: "Gin Tonic Mediterráneo", icon: "🍸" },
-      { id: "kombucha", label: "Kombucha Dorada", icon: "🧃" },
-      { id: "cold", label: "Cold Brew de la Casa", icon: "☕" },
-    ],
+    Quesos: [{ id: "queso-brie", label: "Brie francés", icon: "🧀" },{ id: "jamon-serrano", label: "Camembert", icon: "🧈" },{ id: "aceitunas", label: "Manchego curado", icon: "🫒" },{ id: "gouda", label: "Gouda ahumado", icon: "🧀" },{ id: "roquefort", label: "Roquefort", icon: "🧀" },{ id: "parmigiano", label: "Parmigiano Reggiano", icon: "🧀" },{ id: "cabra", label: "Queso de cabra con miel", icon: "🐐" }],
+    Embutidos: [{ id: "serrano", label: "Jamón serrano ibérico", icon: "🥩" },{ id: "salami", label: "Salami italiano", icon: "🍖" },{ id: "prosciutto", label: "Prosciutto di Parma", icon: "🥓" },{ id: "lomo", label: "Lomo embuchado", icon: "🍗" },{ id: "capocollo", label: "Capocollo", icon: "🍖" },{ id: "chorizo", label: "Chorizo español", icon: "🌶️" },{ id: "mortadela", label: "Mortadela trufada", icon: "🥪" }],
+    Frutas: [ { id: "uvas", label: "Uvas verdes", icon: "🍇" }, { id: "fresas", label: "Fresas", icon: "🍓" }, { id: "frambuesas", label: "Frambuesas", icon: "🫐" }, { id: "higos", label: "Higos frescos", icon: "🍈" }, { id: "datiles", label: "Dátiles rellenos", icon: "🌰" }, { id: "naranjas", label: "Naranjas", icon: "🍊" }, { id: "arandanos", label: "Arándanos secos", icon: "🍒" }, { id: "almendras", label: "Almendras", icon: "🥜" }],
+    Bebidas: [ { id: "brindis", label: "Brindis Rosé", icon: "🥂" }, { id: "moet", label: "Moet & Chandon", icon: "🍾" }, { id: "chardonnay", label: "Chardonnay", icon: "🍷" }, { id: "malbec", label: "Malbec Nocturno", icon: "🍷" }, { id: "sangria", label: "Sangría Artesanal", icon: "🍹" }, { id: "gin", label: "Gin Tonic Mediterráneo", icon: "🍸" }, { id: "kombucha", label: "Kombucha Dorada", icon: "🧃" }, { id: "cold", label: "Cold Brew de la Casa", icon: "☕" }],
   };
 
-  // Estado de seleccionados
-  const [seleccionadas, setSeleccionadas] = useState({
-    Quesos: [],
-    Embutidos: [],
-    Frutas: [],
-    Bebidas: [],
-  });
+  const [seleccionadas, setSeleccionadas] = useState({ Quesos: [], Embutidos: [], Frutas: [], Bebidas: [] });
 
-  // Estado de dropdown abierto
   const [menuAbierto, setMenuAbierto] = useState(null);
 
-  // Toggle selección múltiple
   const toggleSeleccion = (categoria, id) => {
     setSeleccionadas((prev) => ({
       ...prev,
@@ -68,12 +25,10 @@ const Create = () => {
     }));
   };
 
-  // Toggle dropdown
   const toggleMenu = (categoria) => {
     setMenuAbierto(menuAbierto === categoria ? null : categoria);
   };
 
-  // Manejar envío
   const handleForm = (e) => {
     if (e && typeof e.preventDefault === "function") e.preventDefault();
     console.log("Pedido enviado:", { name, description, seleccionadas });

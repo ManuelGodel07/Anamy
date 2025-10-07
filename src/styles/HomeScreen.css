@@ -17,7 +17,8 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 15vw;
+    width: 25%;
+    height: inherit;
     text-align: center;
 }
 
@@ -29,6 +30,7 @@
 .My-Card img {
     width: 100%;
     height: 220px;
+    border: 15%;
     object-fit: cover;
 }
 
@@ -45,14 +47,40 @@
     line-height: 1.4;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
     .Section-Cards {
-        padding: 1rem;
-        gap: 1.5rem;
+        padding: 1.5rem;
+        height: 60vh;
     }
 
     .My-Card {
-        max-width: 90%;
+        width: 30%;
+        height: inherit;
+        border-radius: 5%;
+    }
+
+    .My-Card img {
+        height: 40%;
+    }
+
+    .My-Card h2 {
+        font-size: 1.5rem;
+    }
+
+    .My-Card p {
+        font-size: 1.3rem;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .Section-Cards {
+        padding: 1rem;
+    }
+
+    .My-Card {
+        width: 40%;
     }
 
     .My-Card img {
@@ -66,4 +94,20 @@
     .My-Card p {
         font-size: 0.9rem;
     }
+}
+
+@media (max-width: 480px) {
+    .Section-Cards {
+        padding: 1rem;
+    }
+    .My-Card {
+        width: 40%;
+    }
+    .My-Card img {
+        height: 40%;
+    }
+    .My-Card p {
+        font-size: 0.9rem;
+    }
+    
 }

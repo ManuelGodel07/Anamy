@@ -1,7 +1,6 @@
 .App {
   text-align: center;
-    font-family: 'Playfair Display';
-
+  font-family: 'Playfair Display';
 }
 
 .App-logo {
@@ -9,39 +8,58 @@
   pointer-events: none;
 }
 
-.App-link {
-  color: #71ebf0;
-}
-
-.heart {
-  color: #ff0000;
-}
-
-.small {
-  font-size: 0.75rem;
-}
-.Menu-navigate{
+.Menu-navigate {
   display: flex;
+  padding-top: 3vh;
   flex-direction: row;
   justify-content: space-around;
-  height: 10vh;
+  height: 7vh;
   background-color: #C47C4A;
-
+  flex-wrap: wrap;
 }
+
 .Menu-navigate a {
   color: #4b2e05;
   text-decoration: none;
   font-size: 2rem;
   font-weight: 600;
   transition: color 0.3s ease;
+  margin: 0.5rem 1rem;
 }
-.Section-Cards{
+
+.My-Card img{
+  object-position: center;
+}
+
+.Section-Cards {
   width: 90vw;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem auto;
 }
-.My-Card{
-  width:30%;
+
+.My-Card {
+  width: 30%;
   background-color: azure;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+    .Menu-navigate a {
+      font-size: 1.5rem;
+
+    }
+
+}
+
+@media (max-width: 480px) {
+    .Menu-navigate a {
+        font-size: 1rem;
+    }
+
 }
